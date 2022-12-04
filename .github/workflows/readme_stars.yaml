@@ -1,7 +1,6 @@
 name: Update README ⭐
 on:
-  schedule:
-    - cron: "51 */4 * * *"  # Every 4 hours
+  push:
   workflow_dispatch:
 
 jobs:
@@ -12,7 +11,6 @@ jobs:
       - uses: k2bd/advent-readme-stars@v1
         with:
           userId: 2492306
-          leaderboardId: 9876543
           sessionCookie: ${{ secrets.AOC_SESSION }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
