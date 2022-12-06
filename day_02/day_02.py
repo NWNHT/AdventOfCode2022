@@ -23,3 +23,4 @@ if __name__ == '__main__':
     filename = 'input.txt'
     p1, p2 = solution(filename=filename)
     print(f"Problem 1: {p1}\nProblem 2: {p2}")
+ 

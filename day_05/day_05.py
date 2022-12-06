@@ -13,6 +13,7 @@ def solution(filename: str):
         for i in range(num_stacks):
             stacks[i].append(None if line[i*4 + 1] == ' ' else line[i*4 + 1])
     stacks = [[x for x in lst if x is not None][::-1] for lst in stacks]
+    print(stacks)
     
     # Parse the instructions
     instructions = []
