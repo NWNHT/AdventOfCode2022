@@ -1,3 +1,4 @@
+from time import sleep
 
 def solution(filename):
     
@@ -49,11 +50,12 @@ def draw(register):
     # For each cycle, check if the 3 wide sprite overlaps with the cycle mod 40, note the '-1' because of how the cycles begin on 1, not 0
     for (cycle, x) in register:
         if ((cycle - 1) % 40) - x in [-1, 0, 1]:
-            print('#', end='')
+            print('#', end='', flush=True)
         else:
-            print(' ', end='') # replaced '.' with ' '
+            print(' ', end='', flush=True) # replaced '.' with ' '
         if not cycle % 40:
             print('')
+        sleep(0.01)
 
 
 if __name__ == '__main__':
