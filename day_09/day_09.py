@@ -1,5 +1,6 @@
 
 class Rope:
+
     def __init__(self):
         self.x: int = 0
         self.y: int = 0
@@ -13,6 +14,7 @@ class Rope:
         self.y = y
 
         self.history.append((self.x, self.y))
+
 
 class Head(Rope):
 
@@ -42,6 +44,7 @@ class Head(Rope):
 
     
 class Knot(Rope):
+
     def __init__(self, follows = None):
         super().__init__()
         self.follows = follows
